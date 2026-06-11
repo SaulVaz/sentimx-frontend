@@ -1,16 +1,51 @@
-# React + Vite
+# SentiMX Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dashboard interactivo para análisis de sentimientos en español, construido con React y Recharts. Consume la SentiMX API deployada en Hugging Face Spaces.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend:** https://sentimx-frontend-ivory.vercel.app
+- **API:** https://chesebread-sentimx-api.hf.space
 
-## React Compiler
+## Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Análisis de texto individual con barra de confianza
+- Análisis masivo de reviews desde archivo CSV
+- Historial de los últimos 5 análisis
+- Dashboard con gráficas de distribución (donut chart y bar chart)
+- Tabla de resultados individuales con sentimiento y confianza
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+- Recharts
+- Axios
+- Vercel
+
+## Instalación local
+
+```bash
+git clone https://github.com/SaulVaz/sentimx-frontend.git
+cd sentimx-frontend
+npm install
+```
+
+Crea un archivo `.env` en la raíz:
+
+```
+VITE_API_URL=https://chesebread-sentimx-api.hf.space
+```
+
+Luego corre el proyecto:
+
+```bash
+npm run dev
+```
+
+Abre http://localhost:5173
+
+## Proyecto relacionado
+
+- [SentiMX API](https://github.com/SaulVaz/sentimx-api) — Backend FastAPI con modelo de NLP
